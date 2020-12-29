@@ -51,7 +51,9 @@ Global Styles
 ===============
 */
 
-* {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -146,17 +148,37 @@ p {
   color: var(--clr-primary-1);
   background: var(--clr-primary-8);
 }
+.section {
+  padding: 5rem 0;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-title h2 {
+  text-transform: uppercase;
+}
+.section-title span {
+  color: var(--clr-primary-5);
+}
+.section-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
 
 /*
 =============== 
 Navbar
 ===============
 */
-/*
-=============== 
-Hero
-===============
-*/
+/****** HERO ******/
 .hero {
   min-height: 100vh;
   background: var(--clr-primary-5);
@@ -202,16 +224,62 @@ Hero
     max-width: 45rem;
   }
 }
-/*
-=============== 
-End of Hero
-===============
-*/
-/*
-=============== 
-About
-===============
-*/
+/****** End of HERO ******/
+
+/****** ABOUT ******/
+.about-img,
+.about-info {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 992px) {
+  .about-center {
+    display: flex;
+    justify-content: space-between;
+    /* just in case... */
+    flex-wrap: wrap;
+    
+  }
+  .about-img,
+  .about-info {
+    flex: 0 0 calc(50% - 2rem);
+    margin-bottom: 0;
+    align-self: center;
+  }
+
+}
+@media screen and (min-width:1170px) {
+  .about-img {
+    position: relative;
+  }
+  .about-img::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -1.5rem;
+    left: -1.5rem;
+    /* one way to put it after image */
+    z-index: -1;
+
+    border: 0.5rem solid var(--clr-primary-5);
+  }
+  /*
+   second way to put .about-img::before after image
+   .about-photo { position: relative; }
+  */
+  
+    
+  
+}
+/****** End of ABOUT ******/
+
+
+
+
+
+
+
 /* section add to globals */
 /* title add to globals */
 /* section center add to globals */
