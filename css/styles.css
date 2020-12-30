@@ -226,7 +226,7 @@ Navbar
 }
 /****** End of HERO ******/
 
-/****** ABOUT ******/
+/********* ABOUT ******/
 .about-img,
 .about-info {
   margin-bottom: 2rem;
@@ -261,34 +261,78 @@ Navbar
     left: -1.5rem;
     /* one way to put it after image */
     z-index: -1;
-
     border: 0.5rem solid var(--clr-primary-5);
   }
   /*
-   second way to put .about-img::before after image
-   .about-photo { position: relative; }
+   second way to put .about-img::before after image is...
+   .about-photo { 
+     position: relative;
+    }
   */
-  
-    
-  
 }
 /****** End of ABOUT ******/
 
+/****** Services ******/
+.services {
+  background: var(--clr-grey-10);
+}
+/* .services-center {} */
+.service {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.service-icon {
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-1);
+  display: inline-block;
+  padding: 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.service-title {
+  text-transform: uppercase;
+}
+.service-text {
+  max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 576px) {
+  .section-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .service {
+    flex: 0 0 calc(50% - 1rem);
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .service {
+    flex: 0 0 calc(33.333% - 0.5rem);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .service {
+    display: flex;
+    text-align: left;
+  }
+  .service-icon {
+    align-self: flex-start;
+  }
+  .service-info {
+    padding-left: 1rem;
+  }
+  .service-title {
+    margin-bottom: 0.5rem;
+  }
+}
+/****** End of Services ******/
 
 
 
 
-
-
-/* section add to globals */
-/* title add to globals */
-/* section center add to globals */
-
-/*
-=============== 
-Services
-===============
-*/
 
 /*
 =============== 
